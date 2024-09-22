@@ -115,5 +115,18 @@ e.target.classList.add('active');
 
 //tested and working. Had to debug with Dev tools several times
 
-
-
+//Part 5
+// 1.Within the event listener, if the clicked <a> element does not yet have a class of "active" (it was inactive when clicked):
+//caching
+let clickedLinkText = e.target.textContent.toLowerCase();
+let clickedLinkObj = menuLinks.find(link => link.text.toLowerCase() === clickedLinkText);
+//a. If the clicked <a> element's "link" object within menuLinks has a subLinks property (all do, except for the "link" object for ABOUT), 
+//set the CSS top property of subMenuEl to 100 %.
+if (clickedLinkObj && clickedLinkObj.subLinks) {
+  subMenuEl.style.top = '100%';
+} else {
+  
+//b. Otherwise, set the CSS top property of subMenuEl to 0.
+subMenuEl.style.top = "0%"
+    };
+// Hint: Caching the "link" object will come in handy for passing its subLinks array later.
