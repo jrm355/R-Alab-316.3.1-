@@ -97,23 +97,25 @@ topMenuEl.addEventListener('click', (e) => {
   if (e.target.tagName !== 'A') return;
   // Log the content of the <a> to verify the handler is working.
   console.log(e.target.textContent);
+// checked dev tools, logging works with dev tools
 
-
+// checked dev tools, logging works with dev tools
 // checked dev tools, logging works with dev tools
 //part 4 part 2
 
 // The event listener should add the active class to the <a> element that was clicked, unless it was already active, in which case it should remove it.
-topMenuLinks.forEach((link) => {
-  link.classList.remove('active');
-});
-  
 // // The event listener should remove the active class from each other <a> element in topMenuLinks - whether the active class exists or not.
 // // Hint: Removing a non-existent class from an element does not cause an error!
-//       ('a').removeClass("active");
+  //       ('a').removeClass("active");
+  //removing active class
+  topMenuLinks.forEach((link) => {
+    link.classList.remove('active');
+  });
+  //active class for clicked a element
 e.target.classList.add('active');
 });
 
-//tested and working. Had to debug with Dev tools several times
+//tested and working. Had to debug with Dev tools several times. Unless I misread the prompt
 
 //Part 5
 // 1.Within the event listener, if the clicked <a> element does not yet have a class of "active" (it was inactive when clicked):
