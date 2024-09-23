@@ -99,8 +99,6 @@ topMenuEl.addEventListener('click', (e) => {
   console.log(e.target.textContent);
 // checked dev tools, logging works with dev tools
 
-// checked dev tools, logging works with dev tools
-// checked dev tools, logging works with dev tools
 //part 4 part 2
 
 // The event listener should add the active class to the <a> element that was clicked, unless it was already active, in which case it should remove it.
